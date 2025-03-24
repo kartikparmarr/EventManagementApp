@@ -40,6 +40,25 @@ builder.Services.AddDbContext<EventContext>(options =>
     options.UseSqlite("Data Source=events.db"));
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    try
+    {
+        var eventContext = services.GetRequiredService<EventManagementApp.Data.EventContext>();
+        eventContext.Database.Migrate();
+
+        var identityContext = services.GetRequiredService<EventManagementApp.Data.AppDbContext>();
+        identityContext.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        // Optional: log or handle error
+        Console.WriteLine($"Migration error: {ex.Message}");
+    }
+}
+
 app.UseStaticFiles();
 app.UseRouting();
 

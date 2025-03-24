@@ -289,3 +289,10 @@
 /Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/obj/Debug/net9.0/compressed/nezrqnk58p-muycvpuwrr.gz
 /Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/obj/Debug/net9.0/compressed/v0zgfp0y55-87fc7y1x7t.gz
 /Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/obj/Debug/net9.0/compressed/yfc7ypekbg-mlv21k5csn.gz
+/Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/bin/Debug/net9.0/publish/web.config
+/Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/bin/Debug/net9.0/publish/appsettings.Development.json
+/Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/bin/Debug/net9.0/publish/appsettings.json
+/Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/bin/Debug/net9.0/publish/EventManagementApp.deps.json
+/Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/bin/Debug/net9.0/publish/EventManagementApp.runtimeconfig.json
+/Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/bin/Debug/net9.0/publish/EventManagementApp.staticwebassets.endpoints.json
+/Users/kartikparmar/Desktop/Assignment 5/EventManagementApp/obj/Debug/net9.0/EventManagementApp.sourcelink.json
