@@ -1,0 +1,17 @@
+@* This is a placeholder to satisfy Identity UI layout *@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<EventManagementApp.Models.ApplicationUser> SignInManager
+@inject UserManager<EventManagementApp.Models.ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+<form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/Identity/Account/Login">
+    <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+</form>
+
+}
+else
+{
+    <a class="btn btn-outline-primary btn-sm" href="/Identity/Account/Login">Login</a>
+    <a class="btn btn-primary btn-sm" href="/Identity/Account/Register">Register</a>
+}

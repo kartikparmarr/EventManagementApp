@@ -1,0 +1,35 @@
+@model EventManagementApp.Models.Event
+
+<div class="container mt-5 animate__animated animate__fadeIn">
+    <h2 class="mb-4">Create Event</h2>
+
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Date" class="form-label"></label>
+            <input asp-for="Date" class="form-control" type="date" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Time" class="form-label"></label>
+            <input asp-for="Time" class="form-control" type="time" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Location" class="form-label"></label>
+            <input asp-for="Location" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a href="/Event" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>

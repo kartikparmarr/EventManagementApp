@@ -1,0 +1,50 @@
+@model List<EventManagementApp.Models.Event>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<EventManagementApp.Models.ApplicationUser> UserManager
+
+@{
+    var username = UserManager.GetUserName(User);
+}
+
+<div class="container mt-5 animate__animated animate__fadeIn">
+    <h2 class="mb-3">📅 Event Management</h2>
+    <h5 class="mb-4 text-muted">👋 Welcome, @username!</h5>
+
+    <a class="btn btn-success mb-4" href="/Event/Create">➕ Add New Event</a>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">No events found. Start by adding one!</div>
+    }
+    else
+    {
+        <table class="table table-bordered table-hover shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var evt in Model)
+                {
+                    <tr>
+                        <td>@evt.Title</td>
+                        <td>@evt.Description</td>
+                        <td>@evt.Date.ToShortDateString()</td>
+                        <td>@evt.Time.ToShortTimeString()</td>
+                        <td>@evt.Location</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-warning" href="/Event/Edit/@evt.Id">✏️ Edit</a>
+                            <a class="btn btn-sm btn-outline-danger" href="/Event/Delete/@evt.Id">🗑 Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
